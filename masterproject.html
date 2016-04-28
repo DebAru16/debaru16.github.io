@@ -1,0 +1,88 @@
+<html>
+<title>Universities</title>
+	<head>
+		<!--link to css-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	  	<!-- 	  	<link rel="stylesheet" href="/resources/demos/style.css">
+ -->	  	
+ 		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<div id= title> <h1> Where can I afford to study? </h1></div>
+		<div class="row">
+				<div class="col-xs-12 col-md-4">
+				<!--filters-->
+				<h2>How much can you spend?</h2>
+				<p>
+				<input onchange="mySearch()" type="text" id="amount-from" value="0">
+				<input onchange="mySearch()" type="text" id="amount-to" value="70000">
+				</p>
+				<div id="slider-range"></div>
+				 <form action=""> 
+				<div >
+      				</br><label><input onclick="mySearch()" type="checkbox" value="" id="clickboxnull">Include unknown cost</label>
+    			</div><!-- /input-group -->
+
+				  <div class="clickbox"></div>
+				   <h2>Choose the rank </h2>
+					<input onclick="mySearch()" type="checkbox" name="rank" value="10" id="rank01" checked>1 to 10<br>
+					<input onclick="mySearch()" type="checkbox" name="rank" value="20" id="rank02" checked>11 to 30<br>
+					<input onclick="mySearch()" type="checkbox" name="rank" value="30" id="rank03" checked>31 to 50<br>
+					<input onclick="mySearch()" type="checkbox" name="rank" value="40" id="rank04" checked>51 to 100<br>
+					<input onclick="mySearch()" type="checkbox" name="rank" value="more" id="rank05" checked>101 and more
+				  </form>
+
+				  <h2>Select discipline </h2>  				
+				  <div class="container">
+				    <div class="col-sm-3">
+				    	<div class="input-group">                                          
+				            <input type="TextBox" ID="Discipline" Class="form-control" value="Any"></input>
+				            <div class="input-group-btn">
+				                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				                    <span class="caret"></span>
+				                </button>
+				                <ul id="DisciplineList" class="dropdown-menu">
+				                	<li><a href="#">Any</a></li>
+								    <li><a href="#">Agriculture and Forestry</a></li>
+								    <li><a href="#">Applied Sciences and Professions</a></li>
+								    <li><a href="#">Arts, Design and Architecture</a></li>
+								    <li><a href="#">Business and Management</a></li>
+								    <li><a href="#">Computer Science and IT</a></li>
+								    <li><a href="#">Education and Training</a></li>
+								    <li><a href="#">Engineering and Technology</a></li>
+								    <li><a href="#">Environmental Studies and Earth Sciences</a></li>
+								    <li><a href="#">Hospitality, Leisure and Sports</a></li>
+								    <li><a href="#">Humanities</a></li>
+								    <li><a href="#">Journalism and Media</a></li>
+								    <li><a href="#">Law</a></li>
+								    <li><a href="#">Medicine and health</a></li>
+								    <li><a href="#">Natural science</a></li>
+								    <li><a href="#">Social science</a></li>
+				                </ul>
+				            </div>
+				        </div>
+				   </div>
+				</div>
+				</br>
+				
+				<h2>Results</h2>
+				</br>
+				<input type="TextBox" id="mytext" value="128 univerities found"></input>
+				
+
+			</div>
+		  	<div class="col-xs-12 col-md-8">
+		  		<div id="map"></div>
+
+	  	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<script src="script.js"></script>
+		
+		
+	</body>
+</html>
